@@ -9,6 +9,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { AboutComponent } from './components/about/about.component';
 
+//servicios
+import { HeroesService } from './service/heroes.service';
+
+
 //rutas
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routes';
@@ -16,6 +20,8 @@ import { AppRoutingModule } from './app.routes';
 
 //rutas
 @NgModule({
+
+  // componentes
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -23,12 +29,16 @@ import { AppRoutingModule } from './app.routes';
     HeroesComponent,
     AboutComponent
   ],
+   // modulos
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule
   ],
-  providers: [],
+    // servicios
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
