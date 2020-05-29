@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { AboutComponent } from './components/about/about.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 //servicios
 import { HeroesService } from './service/heroes.service';
@@ -16,6 +17,8 @@ import { HeroesService } from './service/heroes.service';
 //rutas
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routes';
+import { BuscadoComponent } from './components/buscado/buscado.component';
+
 
 
 //rutas
@@ -27,7 +30,9 @@ import { AppRoutingModule } from './app.routes';
     NavbarComponent,
     HomeComponent,
     HeroesComponent,
-    AboutComponent
+    AboutComponent,
+    HeroeComponent,
+    BuscadoComponent
   ],
    // modulos
   imports: [
