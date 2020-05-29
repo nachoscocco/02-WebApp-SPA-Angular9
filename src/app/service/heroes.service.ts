@@ -11,7 +11,7 @@ export class HeroesService {
                 img: "assets/img/aquaman.png",
                 aparicion: "1941-11-01",
                 casa: "DC",
-                num:0
+               
             },
             {
                 nombre: "Batman",
@@ -19,7 +19,7 @@ export class HeroesService {
                 img: "assets/img/batman.png",
                 aparicion: "1939-05-01",
                 casa: "DC",
-                num: 1
+                
             },
             {
                 nombre: "Daredevil",
@@ -27,7 +27,7 @@ export class HeroesService {
                 img: "assets/img/daredevil.png",
                 aparicion: "1964-01-01",
                 casa: "Marvel",
-                num: 2
+               
             },
             {
                 nombre: "Hulk",
@@ -35,7 +35,7 @@ export class HeroesService {
                 img: "assets/img/hulk.png",
                 aparicion: "1962-05-01",
                 casa: "Marvel",
-                num: 3
+               
             },
             {
                 nombre: "Linterna Verde",
@@ -43,7 +43,7 @@ export class HeroesService {
                 img: "assets/img/linterna-verde.png",
                 aparicion: "1940-06-01",
                 casa: "DC",
-                num: 4
+                
             },
             {
                 nombre: "Spider-Man",
@@ -51,7 +51,7 @@ export class HeroesService {
                 img: "assets/img/spiderman.png",
                 aparicion: "1962-08-01",
                 casa: "Marvel",
-                num: 5
+                
             },
             {
                 nombre: "Wolverine",
@@ -59,7 +59,7 @@ export class HeroesService {
                 img: "assets/img/wolverine.png",
                 aparicion: "1974-11-01",
                 casa: "Marvel",
-                num: 6
+               
             }
         ];
 
@@ -78,9 +78,11 @@ export class HeroesService {
     buscarHeroes(h: string):Heroe[]{
         let heroesArray: Heroe[] = [];
         h= h.toLowerCase();
-        for (let heroe of this.heroes){
+        for (let i=0;i< this.heroes.length; i++){
+            let heroe= this.heroes [i];
             let nombre= heroe.nombre.toLowerCase();
             if( nombre.indexOf(h)>=0){
+                heroe.num= i;
                 heroesArray.push(heroe)
             }
         }
@@ -99,5 +101,5 @@ export interface Heroe {
     img: string;
     aparicion: string;
     casa: string;
-    num:number;
+    num?:number;
 }

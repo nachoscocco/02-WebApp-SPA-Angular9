@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { HeroesService, Heroe } from '../../service/heroes.service';
 import { Router} from '@angular/router';
 
@@ -28,7 +28,7 @@ export class HeroesComponent implements OnInit {
 
   }
   verHeroe(idx: number ){
-    /* console.log(idx); */
+     console.log(idx); 
     this._router.navigate( ['/heroe', idx] )
   }
 }

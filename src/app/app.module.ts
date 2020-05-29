@@ -18,6 +18,7 @@ import { HeroesService } from './service/heroes.service';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routes';
 import { BuscadoComponent } from './components/buscado/buscado.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 
 
@@ -32,7 +33,8 @@ import { BuscadoComponent } from './components/buscado/buscado.component';
     HeroesComponent,
     AboutComponent,
     HeroeComponent,
-    BuscadoComponent
+    BuscadoComponent,
+    HeroeTarjetaComponent
   ],
    // modulos
   imports: [
